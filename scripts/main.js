@@ -148,18 +148,18 @@ function getRandomInt(min,max) {
 }
 
 document.addEventListener("keydown", function(e){
-    if (e.code== "KeyW"){
+    if (e.code== "KeyW" && snake.dy===0){
         snake.dy= -config.sizeCell;
         snake.dx=0;}
-    else if (e.code=="KeyA"){
+    else if (e.code=="KeyA" && snake.dx===0){
         snake.dx=-config.sizeCell;
         snake.dy=0;
         }
-    else if (e.code=="KeyS"){
+    else if (e.code=="KeyS" && snake.dy===0){
             snake.dy=config.sizeCell;
             snake.dx=0;
             }
-    else if (e.code=="KeyD"){
+    else if (e.code=="KeyD"&& snake.dx===0){
                 snake.dx=config.sizeCell;
                 snake.dy=0;
                 }
