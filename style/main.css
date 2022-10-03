@@ -45,6 +45,26 @@ body {
 }
 
 
+.high-score {
+	padding: 10px 15px;
+	min-width: 160px;
+	height: 50px;
+	background: #FA4005;
+	border-radius: 5px;
+
+	display: flex;
+	justify-content: center;
+	align-items: center
+	;
+	
+}
+#high-score-count{
+	font-size: 3vmin;
+	color: #121214;
+	font-weight: bold;
+}
+
+
 
 .canvas-wrapper {
 	background-color: #161618;
