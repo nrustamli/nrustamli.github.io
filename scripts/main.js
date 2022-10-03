@@ -1,5 +1,7 @@
 let scoreBlock;
 let score=0;
+let highScoreBlock;
+let highScore=0;
 
 const config = {
     step: 0,
@@ -105,9 +107,12 @@ function collisionBorder() {
 
 
 function refreshGame(){
+    if(score>highScore){
+        highScore=score;
+        drawHighScore();
+    }
     score=0
     drawScore();
-
     snake.x=160;
     snake.y=160;
     snake.tails=[];
@@ -134,13 +139,16 @@ function randomPositionBerry() {
 
 }
 
-
 function inScore() {
     score++;
     drawScore();
 }
 function drawScore(){
     scoreBlock.innerHTML=score;
+}
+
+function drawHighScore(){
+    document.getElementById("high-score-count").innerHTML =highScore;
 }
 
 function getRandomInt(min,max) {
